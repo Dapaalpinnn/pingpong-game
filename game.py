@@ -60,14 +60,30 @@ class Game:
                 self.paddle2.move(8)
 
     def draw_table_tennis_background(self):
+        # Gambar background hitam
         game_screen.fill(COLORS["black"])
+        
+        # Gambar lapangan hijau
         pygame.draw.rect(game_screen, COLORS["green"], 
-                        (COURT_MARGIN, COURT_MARGIN, COURT_WIDTH, COURT_HEIGHT))
+                        (COURT_MARGIN, COURT_MARGIN, 
+                         COURT_WIDTH, COURT_HEIGHT))
+        
+        # Gambar garis tepi lapangan
+        pygame.draw.rect(game_screen, COLORS["white"],
+                        (COURT_MARGIN, COURT_MARGIN,
+                         COURT_WIDTH, COURT_HEIGHT), 2)
+        
+        # Garis tengah vertikal (net)
         pygame.draw.line(game_screen, COLORS["white"],
                         (SCREEN_WIDTH // 2, COURT_MARGIN),
-                        (SCREEN_WIDTH // 2, SCREEN_HEIGHT - COURT_MARGIN), 2)
-        pygame.draw.rect(game_screen, COLORS["white"],
-                        (COURT_MARGIN, COURT_MARGIN, COURT_WIDTH, COURT_HEIGHT), 2)
+                        (SCREEN_WIDTH // 2, SCREEN_HEIGHT - COURT_MARGIN),
+                        2)
+        
+        # Garis tengah horizontal
+        pygame.draw.line(game_screen, COLORS["white"],
+                        (COURT_MARGIN, SCREEN_HEIGHT // 2),
+                        (SCREEN_WIDTH - COURT_MARGIN, SCREEN_HEIGHT // 2),
+                        2)
 
     def draw_victory_screen(self):
         game_screen.fill(COLORS["black"])
