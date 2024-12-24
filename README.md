@@ -23,7 +23,7 @@ Clone repository:
 https://github.com/MuhammadDafaAlvin/pingpong-game.git
 ```
 
-Pindah ke folder projek
+Pindah ke folder proyek
 ```sh
 cd pingpong-game
 ```
@@ -38,6 +38,28 @@ Jalankan game:
 ```sh
 python main.py
 ```
+
+# Controls
+> Menu
+- Gunakan mouse untuk memilih mode permainan atau keluar
+
+> Kontrol Dalam Game
+- Pemain 1:
+  - W: Gerak paddle ke atas
+  - S: Gerak paddle ke bawah
+- Pemain 2:
+  - ↑ (Panah Atas): Gerak paddle ke atas
+  - ↓ (Panah Bawah): Gerak paddle ke bawah
+
+> Layar Kemenangan
+  - SPACE: Main lagi
+  - ESC: Kembali ke menu utama
+
+> Aturan Permainan
+  - Pemain pertama yang mencapai 5 poin menang
+  - Kecepatan bola meningkat setiap kali memantul di paddle
+  - Poin didapat ketika lawan gagal mengembalikan bola
+  - Pada mode pemain tunggal, CPU mengendalikan paddle kanan
 
 # Credit
 > Lusida Cynthia Winayu (23091397075) |
